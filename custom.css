@@ -1,0 +1,111 @@
+
+   body {
+     max-width:1000px;
+     margin: 100px auto;/*top right(auto sets bottom=top, right=left)*/
+     line-heigt:24px;
+     font:16px Helvetica, Sans-serif;
+     font-family: 'Work Sans', sans-serif;
+     /* 以上一行从fonts.google.com引入字体 */
+     background: url(images/bg.jpg) no-repeat;
+     background-size: cover;
+     /* Serif字体装饰性强，如果很多字段适用；San-serif字体平实，适合字少的页面 */
+     /* 背景图搜索的时候用seamless texture，保存时在 Web Resume文件夹下建立images文件夹，把文件名存成代码中的名字 */
+    }
+.row{
+  display: flex;
+}
+
+.column{
+  padding: 20px;
+}
+
+.column.side{
+  flex:2;
+}
+
+.column.middle{
+  flex: 3;
+}
+  /* # is used to target div with custom id */
+i{
+  margin-right: 20px;
+  animation: spin 4000 ease-in-out;
+  /* animation-name: 4000ms;
+  animation-timing-function: linear; */
+}
+
+@keyframs spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+  #pic{
+    float:right;
+    margin:45px 0 0 0;
+    /* 图片定位，上右下左 */
+  }
+
+  .hobby {
+    background: #369;
+    padding: 16px;
+    width: 300px;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+/* 标题美化如下，padding是内向距离，margin是外向距离 */
+  h1{
+    color: rgb(6,58,104);
+    margin:0 0 16px 0;
+    padding: 0 0 16px 0;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    border-bottom: 1px solid #976;
+  }
+
+  h2{
+    color:rgb(6,58,104);
+    font-size: 32px;
+    font-weight:bold;
+  }
+
+/* 美化链接如下 */
+   a{
+     border-bottom: 1px dotted;
+     text-decoration: none;
+     color: rgb(255，244，13)；
+   }
+
+   a:hover{
+     border-bottom-style: solid;
+     color: black;
+   }
+
+   ul{
+     margin: 0 0 32px 17px;
+   }
+
+   li{
+     color:rgb(52,5,99);
+   }
+
+   /* when viewport of device becomes 600px or less */
+@media (max-width: 600px){
+  /* change flex direction to column */
+  .row{
+    flex-diretion: column;
+  }
+
+  img{
+    display:none;
+  }
+/* 文字展示居中for mobile design */
+#title{
+  text-align: center;
+}
+
+}

@@ -1,98 +1,40 @@
 <!DOCTYPE html>
-<htmal lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<!-- 以上设置以后只要!+tab就可以了 -->
+
   <title>Elaine</title>
-
-  <style type="text/css">
-     body {
-       line-heigt:24px;
-       font:16px Helvetica, Sans-serif;
-       background: url(images/bg.jpg);
-       /* Serif字体装饰性强，如果很多字段适用；San-serif字体平实，适合字少的页面 */
-       /* 背景图搜索的时候用seamless texture，保存时在 Web Resume文件夹下建立images文件夹，把文件名存成代码中的名字 */
-      }
-
-    /* # is used to target div with custom id */
-    #page-wrap{
-      width: 900px;
-      margin: 40px auto 60px auto;
-      /* margin后面的四个参数是页面的上，右，下，左，reserve some empty space around content */
-    }
-
-    #pic{
-      float:right;
-      margin:45px 0 0 -5px;
-      /* 图片定位，上右下左 */
-    }
-
-    .hobby {
-      background: #369;
-      padding: 16px;
-      width: 500px;
-      color: white;
-      margin-bottom: 16px;
-    }
-
-/* 标题美化如下，padding是内向距离，margin是外向距离 */
-    h1{
-      color: rgb(6,58,104);
-      margin:0 0 16px 0;
-      padding: 0 0 16px 0;
-      font-size: 42px;
-      font-weight: bold;
-      letter-spacing: -2px;
-      border-bottom: 1px solid #976;
-    }
-
-    h2{
-      color:rgb(6,58,104);
-      font-size: 32px;
-      font-weight:bold;
-    }
-
-/* 美化链接如下 */
-     a{
-       border-bottom: 1px dotted;
-       text-decoration: none;
-       color: rgb(255，244，13)；
-     }
-
-     a:hover{
-       border-bottom-style: solid;
-       color: black;
-     }
-
-     ul{
-       margin: 0 0 32px 17px;
-     }
-
-     li{
-       color:rgb(52,5,99);
-     }
-
-
-  </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!--以上说明从fontawesome.com找图标  -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <!-- 以上说明从fonts.google.com引入字体 -->
+  <link rel="stylesheet" href="custom.css">
+  <!-- 以上将index.html的样式链接到custom.css -->
 </head>
+
+
 
 <body>
   <!-- 对body进行美化，先在body的头和尾内加入div和/div -->
  <div id="page-wrap">
+<div class="row">
+  <div class="column">
  <img src="images/profile.gif" width="345" height="auto" id="pic">
+  </div>
 <!-- 插入图片 -->
 <main role="main">
 <section>
-<header role="banner">
+<div id="title" class="column">
   <h1 id="top">Elaine</h1>
+</div>
+</div>
   <!--Note: <br/> is for change a line -->
   <!-- 笔记写完，ctrl+/可以存成自己看的笔记 -->
-  <p>Prtfolio: <a href="https://medium.com/@elainepan_25203/begin-a-path-in-edutech-4f3b5031a10e">My Edutech Blog</a><p>
-  <p><br/>Email: <a href="mailto:hp2490@tc.columbia.edu">hp2490@tc.columbia.edu</a></p>
-  <p><br/>Twitter:@ElainePan_NY</p>
     <!-- div 可以当做folder用，没有确定的默认值 -->
-</header>
+
   <nav role="navigation">
 <!-- 加不加 <ul>有什么差别 ？-->
       <li><a href="#edu" title="edu within same page">Education</a></li>
@@ -101,17 +43,18 @@
   </nav>
 </section>
 
-<div>
+<div class="row">
+<div class="column side">
    <h2 id="edu">Education</h2>
    <!-- 输入h2，再按tab就会自动生成起始和终止 -->
    <h3>Columbia University</h3>
-   <p> &nbsp;&nbsp;&nbsp;&nbsp;<strong>Major:</strong> Educational Technology & Media<strong><br/></p>
+   <p> &nbsp;<strong>Major:</strong> Educational Technology & Media<strong><br/></p>
    <h3>Zhejiang University</h3>
-   <p> &nbsp;&nbsp;&nbsp;&nbsp;Major:</strong> International Economics & Trade
+   <p> &nbsp;Major:</strong> International Economics & Trade
    </p>
 </div>
 
-<div>
+<div class="column side">
   <h2 id="skill">Skills</h2>
   <h3>Office Skills</h3>
   <p>Event Organization, Project Management, Product Design</p>
@@ -120,7 +63,7 @@
   <p>HTML, CSS, Javascript, C#, Python, MySQL, Max MSP, LOGIC PRO</p>
 </div>
 
-<section>
+<div class="column middle">
   <h2 id="hobby">Hobbies</h2>
 <div class="hobby">
   <h3>Super Yogurt Fan</h3>
@@ -141,19 +84,26 @@
     <li><b>Oceania:</b> Australia, New Zealand</li>
   </ul>
 </div>
-</section>
+</div>
+</div>
 
   </p>
   <p><a href="#top" title="back to the top of this page"><b>back to top</b></a></p>
 </main>
 
-<footer role="contentinfo">
+<footer role="contactinfo">
   <p>
+    <img src="twitter icon.jpg" width=35 hight=auto>
     follow me on twitter <a href="https://twitter.com/elainepan_NY">@ElainePan_NY</a>
   </p>
-</footer>
 
+<div class="footer">
+  <p><i class="fab fa-angellist fa-2x spin"></i><a href="https://medium.com/@elainepan_25203/begin-a-path-in-edutech-4f3b5031a10e">My Edutech Blog</a></p>
+  <p><i class="far fa-hand-point-right fa-2x spin"></i><a href="mailto:hp2490@tc.columbia.edu">hp2490@tc.columbia.edu</a></p>
 </div>
+</footer>
+</div>
+
 </body>
 
 </html>
